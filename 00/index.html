@@ -18,14 +18,29 @@
         // let nome = prompt('Digite seu nome: ');
         // console.log(mensagem, nome);
 
-        console.log("Esta é a mensagem final!");
+        // console.log("Esta é a mensagem final!");
 
-        let contador = 0;
-        while (contador < 10 ) {
-            console.log("contage: " + contador);
-            contador++;
+        // let contador = 0;
+        // while (contador < 10 ) {
+        //     console.log("contage: " + contador);
+        //     contador++;
+        // }
+
+        let nota01 = prompt("Digite a primeira nota: ");
+        let nota02 = prompt("Digite a segunda nota: ");
+        let nota03 = prompt("Digite a terceira nota: ");
+        let nota04 = prompt("Digite a quarta nota: ");
+
+        let media = (nota01 + nota02 + nota03 + nota04) / 4 ;
+
+        if (media >= 7) {
+            alert("Aprovado");
+        } else if (media >= 5) {
+            alert("Recuperação");
+        } else {
+            alert("Reprovado");
         }
-
+        
     </script>
 </body>
 </html>
