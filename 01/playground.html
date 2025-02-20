@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 
+    INICIO
+    ESCREVER "Digite o total de notas"  
+    LER totalDeNotas
+    PARA CADA NOTA EM totalDeNotas
+        ESCREVER "Informe a nota N"
+      soma = soma + notaLida
+    FIMREPETICAO
+    media = soma / totalDeNotas
+    ESCREVA media
+    FIM
+    -->
+
+    <script>
+        // let totalDeNotas = prompt("Digite o total de notas: ");
+        // let soma = 0;
+        // for (let i = 0; i < totalDeNotas; i++) {
+        //     let notaLida = prompt("Informe a nota " + (i + 1));
+        //     soma = soma + notaLida;
+        // }
+        // let media = soma / totalDeNotas;
+        // console.log(media);
+
+
+        // Resolução do exercício
+        
+        // Solicita ao usuário o total de notas que ele deseja informar, e armazena o valor como um número inteiro.
+        let totalDeNotas = parseInt(prompt("Digite o total de notas: "));
+
+        // Inicializa a variável soma com o valor 0, que irá acumular a soma de todas as notas fornecidas.
+        let soma = 0;
+
+        // Inicializa a variável contador com o valor 0, que irá controlar o número de notas informadas.
+        let contador = 0;
+
+        // Inicia um loop que vai executar enquanto o contador for menor que o total de notas.
+        while (contador < totalDeNotas) {
+            // Dentro do loop, solicita ao usuário que informe uma nota, utilizando o valor do contador para personalizar a mensagem (nota N 0, nota N 1, etc.).
+            // A nota informada é convertida para um número de ponto flutuante e somada à variável soma.
+            soma += parseFloat(prompt(`Informe a nota N ${contador}`));            
+
+            // Incrementa o contador para que o próximo número de nota seja considerado na próxima interação.
+            contador++;
+        }
+
+        // Após o loop, calcula a média das notas, dividindo a soma total pelas notas informadas.
+        let media = soma / totalDeNotas;
+
+        // Exibe um alerta com o valor da média calculada.
+        alert(media);
+
+
+
+
+    </script>
+
+
+</body>
+</html>
