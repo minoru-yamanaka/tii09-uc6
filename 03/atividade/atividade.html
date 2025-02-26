@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function CalculoDeFrete() {
+            let DistanciaDeEntrega = Number(prompt('Digite a distância de entrega em KM: '));
+
+            if (DistanciaDeEntrega <= 50) {
+                alert(`Frete Grátis!`);
+            } else if (DistanciaDeEntrega <= 100) {
+                alert(`O valor do frete é de R$ 10,00`);
+            } else {
+                alert(`O valor do frete é de R$ 20,00`);
+            }
+        }
+
+        CalculoDeFrete();
+
+    </script>
+
+</body>
+</html>
