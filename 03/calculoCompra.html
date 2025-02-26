@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // 'Digite o valor de sua compra'
+        let ValorMinimoParaDesconto = 100;
+        let ValorDeCompra = Number(prompt('Digite o valor de sua compra'));
+        // 'Você ganhou 10% de desconto!'
+        if (ValorDeCompra >= ValorMinimoParaDesconto) {
+            console.log('Você ganhou 10% de desconto!');
+            let Desconto = Number(ValorDeCompra * 0.10);
+            console.log(`O valor do desconto é de R$ ${Desconto}`);
+            let valorFinal = ValorDeCompra - Desconto;
+            console.log(`O valor final da compra é de R$ ${valorFinal}`);
+        } else {
+            console.log(`Para obter o desconto, faça compras acima de R$ ${ValorMinimoParaDesconto}`);
+        }
+        // 'Para obter o desconto, faça compras acima de R$ 100,00'
+
+
+        let temperatura = Number(prompt('Digite a temperatura: '));
+        if (temperatura < 10) {
+            console.log(`Está muito frio.`);
+        } else if (temperatura < 25) {
+            console.log(`A temperatura está agradável.`);
+        } else {
+            console.log(`Está muito quente.`);
+        }
+
+
+    </script>
+
+</body>
+</html>
