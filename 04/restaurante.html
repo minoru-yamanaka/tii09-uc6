@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function Marmita() {
+            let carnes = 7;
+            let arroz = 12;
+            let feijao = 8;
+
+            while (carnes > 0 && arroz > 0 && feijao > 0) {
+                let opcao = Number(prompt("Escolha a marmita: \n 1-Completa \n 2-Carnes"));
+
+                switch (opcao) {
+                    case 1:
+                        // para carnes, arroz e feijão
+                        carnes--;
+                        arroz--;
+                        feijao--;
+                        console.log("Marmita completa!");
+                        break;
+                    case 2:
+                        // para carnes
+                        carnes--;
+                        carnes--;
+                        console.log(`Marmita de carnes!. Carne: ${carnes}`);
+                        break;
+                    default:
+                        console.log("Opção inválida");
+                        break;
+                }
+            }
+            console.log("Fim do estoque!");
+        }
+        Marmita();
+
+        function MarmitaProf() {
+
+        }
+
+
+    </script>
+</body>
+</html>
