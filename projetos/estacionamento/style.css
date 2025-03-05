@@ -26,3 +26,15 @@ body {
     cursor: pointer;
     border: 2px solid black;
 }
+
+.ocupado {
+    background: red;
+    color: white;
+}
+
+.resumo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    text-align: right;
+}
