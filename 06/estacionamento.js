@@ -17,7 +17,13 @@ function exibirEstacionamento(){
 }
 
 function removerCarro(linha, coluna){
-    estacionamento[linha][coluna] = "Vazio";
+     // remove um carro se a vaga estiver ocupada
+     if(estacionamento[linha][coluna] !== "Vazio") {
+        console.log(`Removendo o veículo: ${estacionamento[linha][coluna]}`)        
+        estacionamento[linha][coluna] = "Vazio";
+    } else {
+        console.log("VAGA JÁ SE ENCONTRA VAZIA!");
+    }
 }
 
 exibirEstacionamento();
@@ -25,3 +31,5 @@ estacionarCarro(1, 1, "ZBX9887N");
 estacionarCarro(2, 1, "ZBX9887N");
 exibirEstacionamento();
 estacionarCarro(1, 1, "TTT0055");
+removerCarro(1,1);
+exibirEstacionamento();
