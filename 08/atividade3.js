@@ -7,26 +7,25 @@ let alunos = [
     { nome: "Pedro", nascimento: "1993-12-05", tipoSanguineo: "A+", cpf: "67890123455", telefone: "944444444" }
 ];
 
+// console.log(numeros);
 
-// BUSCA BINÁRIA POR JOÃO, PARA ISSO A LISTA PRECISA ESTAR ORDENADA EM ORDENADA POR CPF
+function bubbleSort(array) {
 
-function buscaBinaria(array, cpf) {
-    let meio = Math.floor(array.length / 2);
-    let inicio = 0;
-    let final = array.length - 1;
-
-    while(inicio<=final) {
-        meio = Math.floor((inicio + final) / 2);
-
-        if(array[meio].cpf === cpf) {
-            return meio;
-        } else if(array[meio].cpf < cpf) {
-            inicio = meio + 1;
-        } else {
-            final = meio - 1;
+    for (let limite = array.length - 1; limite >= 0; limite--) {
+        for (let i = 0; i < limite; i++) {
+            if (array[i] > array[i + 1]) { // troco eles de lugar            
+                let temp = array[i];
+                array[i] = array[i + 1];
+                array[i + 1] = temp;
+            }
         }
     }
-    return -1;
+
+    return array;
 }
-let resultado = buscaBinaria(alunos, "45678901233");
-console.log(resultado); 
+
+// SAÍDA
+let saida1 = bubbleSort(alunos)
+console.log(saida1);
+
+// tem de terminar o bubbleSort
