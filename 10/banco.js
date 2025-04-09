@@ -44,23 +44,29 @@ class Conta {
 }
 
 class ContaPoupanca extends Conta {
-    calcularRendimento() {
-        this._saldo += this._saldo * 0.005;
+    _diaAniversario;
+
+    constructor(titular, saldoInicial, diaAniversario) {
+        super(titular, saldoInicial);
+        this._diaAniversario = diaAniversario;
+    }
+
+    calcularRendimento(diaDeHoje) {
+        if(this._diaAniversario == diaDeHoje) {
+            this._saldo += this._saldo * 0.005;
+        }
     }
 }
 
 class ContaCorrente extends Conta {
-    sacar(valor) {
-        const taxa = valor * 0.02;
-        const novoValorTotal = valor + taxa;
+    sacar(valor) {        
+        const novoValorTotal = valor + 1;
         super.sacar(novoValorTotal);
     }
 }
 
+
 let conta1 = new ContaPoupanca("Paulo", 1200);
 let conta2 = new ContaCorrente("Clodoaldo", 2100);
 console.log(conta2.getSaldo());
-// console.log(conta2.getSaldo());
-// conta1.calcularRendimento();
-// console.log(conta1.getSaldo());
-conta2.sacar(100)
+conta2.sacar(200);
