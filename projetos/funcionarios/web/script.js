@@ -4,7 +4,9 @@ import { Estagiario } from './Estagiario.js';
 
 // Implementar logica de integração com a página
 
+let bancoDeDados = [];
 
+// botão que ativa a função 
 document.getElementById("btnCadastrar").addEventListener("click", function() {
     const nome = document.getElementById("nome").value;
     const matricula = document.getElementById("matricula").value;
@@ -12,6 +14,28 @@ document.getElementById("btnCadastrar").addEventListener("click", function() {
     const endereco = document.getElementById("endereco").value;
     const tipo = document.getElementById("tipoFuncionario").value;
 
-    console.log("Chamou o cadastrar");
-    alert("Cadastrar");
-})
+    if(!nome || !matricula || !ano || !endereco|| !tipo) {
+        alert("Dados inválidos, favor preencher corretamente!");
+        return;
+    }
+
+    let novoFunc;
+
+    if (tipo === "gerente") {
+        novoFunc = new Gerente(nome, matricula, ano, endereco);
+    } else if (tipo === "operador") {
+        novoFunc = new OperadorCaixa(nome, matricula, ano, endereco);
+    } else if (tipo === "estagiario") {
+        novoFunc = new Estagiario(nome, matricula, ano, endereco);
+    }
+
+    bancoDeDados.push(novoFunc);
+    console.log(bancoDeDados);
+});
+
+
+function exibirDados() {
+    // Busca um elemento na tela
+    // Percorre o bancoDeDados, e lista esses elementos na tela
+
+}
